@@ -5,20 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Joan Investments – Quality Lifestyle Solutions | Malawi</title>
     
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-    
-    <!-- Google Fonts - matching Kaira's style -->
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Marcellus&display=swap" rel="stylesheet"/>
-    
-    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     
     <style>
         :root {
             --heading-font: "Marcellus", Georgia, serif;
             --body-font: "Jost", system-ui, sans-serif;
-            
             --warm-brown: #8B6914;
             --warm-brown-light: #A67C1E;
             --warm-cream: #FAF7F2;
@@ -31,349 +25,83 @@
             --transition: all 0.3s ease;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
-            font-family: var(--body-font);
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 1.6;
-            color: var(--soft-gray);
-            background: var(--white);
-            overflow-x: hidden;
-            letter-spacing: 0.02rem;
+            font-family: var(--body-font); font-size: 16px; font-weight: 400; line-height: 1.6;
+            color: var(--soft-gray); background: var(--white); overflow-x: hidden; letter-spacing: 0.02rem;
         }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: var(--heading-font);
-            font-weight: 400;
-            color: var(--soft-black);
-            line-height: 1.24;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 40px;
-        }
+        h1, h2, h3, h4, h5, h6 { font-family: var(--heading-font); font-weight: 400; color: var(--soft-black); line-height: 1.24; }
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; height: auto; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 40px; }
 
         /* ============ NAVIGATION ============ */
         .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            padding: 20px 40px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            padding: 20px 40px; display: flex; align-items: center; justify-content: space-between;
             transition: background-color 0.4s ease, padding 0.4s ease, box-shadow 0.4s ease;
             background: transparent;
         }
         .navbar.scrolled {
-            background: rgba(255, 255, 255, 0.97);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 1px 20px rgba(0, 0, 0, 0.06);
-            padding: 12px 40px;
+            background: rgba(255, 255, 255, 0.97); backdrop-filter: blur(10px);
+            box-shadow: 0 1px 20px rgba(0, 0, 0, 0.06); padding: 12px 40px;
         }
-        .nav-logo img {
-            height: 60px;
-            width: auto;
-            transition: height 0.3s ease;
-        }
-        .navbar.scrolled .nav-logo img {
-            height: 36px;
-        }
-
-        /* Desktop nav links */
-        .nav-links {
-            display: flex;
-            gap: 32px;
-            list-style: none;
-            align-items: center;
-        }
+        .nav-logo img { height: 60px; width: auto; transition: height 0.3s ease; }
+        .navbar.scrolled .nav-logo img { height: 36px; }
+        .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
         .nav-links a {
-            font-family: var(--body-font);
-            font-size: 13px;
-            font-weight: 500;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            color: var(--soft-black);
-            position: relative;
-            transition: color 0.3s ease;
+            font-family: var(--body-font); font-size: 13px; font-weight: 500;
+            letter-spacing: 1.5px; text-transform: uppercase; color: var(--soft-black);
+            position: relative; transition: color 0.3s ease;
         }
         .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0;
-            height: 1.5px;
-            background: var(--warm-brown);
-            transition: width 0.3s ease;
+            content: ''; position: absolute; bottom: -4px; left: 0; width: 0;
+            height: 1.5px; background: var(--warm-brown); transition: width 0.3s ease;
         }
-        .nav-links a:hover {
-            color: var(--warm-brown);
-        }
-        .nav-links a:hover::after {
-            width: 100%;
-        }
+        .nav-links a:hover { color: var(--warm-brown); }
+        .nav-links a:hover::after { width: 100%; }
         .nav-cta {
-            background: var(--warm-brown) !important;
-            color: var(--white) !important;
-            padding: 10px 22px !important;
-            border-radius: 2px;
+            background: var(--warm-brown) !important; color: var(--white) !important;
+            padding: 10px 22px !important; border-radius: 2px;
             transition: background 0.3s ease !important;
         }
-        .nav-cta:hover {
-            background: var(--warm-brown-light) !important;
-            color: var(--white) !important;
-        }
-        .nav-cta::after {
-            display: none !important;
-        }
+        .nav-cta:hover { background: var(--warm-brown-light) !important; color: var(--white) !important; }
+        .nav-cta::after { display: none !important; }
 
-        /* Hamburger button */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            justify-content: center;
-            gap: 6px;
-            cursor: pointer;
-            z-index: 1001;
-            background: none;
-            border: none;
-            padding: 8px;
-            width: 44px;
-            height: 44px;
-        }
-        .hamburger span {
-            display: block;
-            width: 26px;
-            height: 2px;
-            background: var(--soft-black);
-            transition: transform 0.3s ease, opacity 0.3s ease;
-            transform-origin: center;
-        }
-        .hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 6px);
-        }
-        .hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-        .hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -6px);
-        }
-
-        /* Mobile menu overlay */
-        .mobile-menu-overlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            z-index: 999;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 28px;
-        }
-        .mobile-menu-overlay.active {
-            display: flex;
-        }
-        .mobile-menu-overlay a {
-            font-family: var(--heading-font);
-            font-size: 24px;
-            font-weight: 400;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--soft-black);
-            transition: color 0.3s ease;
-        }
-        .mobile-menu-overlay a:hover {
-            color: var(--warm-brown);
-        }
-        .mobile-menu-overlay .mobile-cta {
-            background: var(--warm-brown);
-            color: var(--white) !important;
-            padding: 14px 32px;
-            border-radius: 2px;
-            font-size: 16px;
-            font-family: var(--body-font);
-            font-weight: 500;
-            letter-spacing: 2px;
-        }
+        .hamburger { display: none; flex-direction: column; justify-content: center; gap: 6px; cursor: pointer; z-index: 1001; background: none; border: none; padding: 8px; width: 44px; height: 44px; }
+        .hamburger span { display: block; width: 26px; height: 2px; background: var(--soft-black); transition: transform 0.3s ease, opacity 0.3s ease, background 0.3s ease; transform-origin: center; }
+        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+        .mobile-menu-overlay { display: none; position: fixed; inset: 0; background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); z-index: 999; flex-direction: column; align-items: center; justify-content: center; gap: 28px; }
+        .mobile-menu-overlay.active { display: flex; }
+        .mobile-menu-overlay a { font-family: var(--heading-font); font-size: 24px; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; color: var(--soft-black); transition: color 0.3s ease; }
+        .mobile-menu-overlay a:hover { color: var(--warm-brown); }
+        .mobile-menu-overlay .mobile-cta { background: var(--warm-brown); color: var(--white) !important; padding: 14px 32px; border-radius: 2px; font-size: 16px; font-family: var(--body-font); font-weight: 500; letter-spacing: 2px; }
 
         /* ============ HERO SLIDER ============ */
-        .hero {
-            position: relative;
-            height: 100vh;
-            min-height: 650px;
-            overflow: hidden;
-        }
-        .swiper-hero {
-            width: 100%;
-            height: 100%;
-        }
-        .hero-slide {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .hero-slide::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.15) 40%, rgba(0,0,0,0.4) 100%);
-            z-index: 2;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 5;
-            text-align: center;
-            max-width: 720px;
-            padding: 0 24px;
-        }
-        .hero-tag {
-            font-family: var(--body-font);
-            font-size: 11px;
-            font-weight: 500;
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.9);
-            margin-bottom: 18px;
-            display: block;
-        }
-        .hero-title {
-            font-family: var(--heading-font);
-            font-size: clamp(38px, 6vw, 68px);
-            font-weight: 400;
-            color: var(--white);
-            line-height: 1.1;
-            margin-bottom: 18px;
-        }
-        .hero-title em {
-            font-style: italic;
-            color: #E8D5A3;
-        }
-        .hero-text {
-            font-family: var(--body-font);
-            font-size: 16px;
-            font-weight: 300;
-            color: rgba(255,255,255,0.85);
-            margin-bottom: 32px;
-            line-height: 1.7;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .hero-buttons {
-            display: flex;
-            gap: 14px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .btn {
-            font-family: var(--body-font);
-            font-size: 12px;
-            font-weight: 500;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            padding: 14px 30px;
-            text-decoration: none;
-            transition: var(--transition);
-            border-radius: 2px;
-            display: inline-block;
-            cursor: pointer;
-        }
-        .btn-primary {
-            background: var(--warm-brown);
-            color: var(--white);
-            border: 2px solid var(--warm-brown);
-        }
-        .btn-primary:hover {
-            background: var(--warm-brown-light);
-            border-color: var(--warm-brown-light);
-            transform: translateY(-2px);
-            color: var(--white);
-        }
-        .btn-outline {
-            background: transparent;
-            color: var(--white);
-            border: 2px solid rgba(255,255,255,0.7);
-        }
-        .btn-outline:hover {
-            background: var(--white);
-            color: var(--soft-black);
-            border-color: var(--white);
-            transform: translateY(-2px);
-        }
-        .hero-scroll {
-            position: absolute;
-            bottom: 28px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 10;
-            color: rgba(255,255,255,0.8);
-            text-align: center;
-            animation: bounce 2s infinite;
-        }
-        .hero-scroll span {
-            font-size: 10px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            display: block;
-            margin-bottom: 4px;
-            font-family: var(--body-font);
-            font-weight: 500;
-        }
-        .hero-scroll i {
-            font-size: 12px;
-        }
-        .hero-pagination {
-            position: absolute;
-            bottom: 30px !important;
-            right: 40px !important;
-            left: auto !important;
-            width: auto !important;
-            z-index: 10;
-        }
-        .swiper-pagination-bullet {
-            width: 8px;
-            height: 8px;
-            background: rgba(255,255,255,0.5);
-            opacity: 1;
-            margin: 0 6px !important;
-        }
-        .swiper-pagination-bullet-active {
-            background: #E8D5A3;
-            width: 24px;
-            border-radius: 4px;
-        }
+        .hero { position: relative; height: 100vh; min-height: 650px; overflow: hidden; }
+        .swiper-hero { width: 100%; height: 100%; }
+        .hero-slide { position: relative; width: 100%; height: 100%; background-size: cover; background-position: center; display: flex; align-items: center; justify-content: center; }
+        .hero-slide::before { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.15) 40%, rgba(0,0,0,0.4) 100%); z-index: 2; }
+        .hero-content { position: relative; z-index: 5; text-align: center; max-width: 720px; padding: 0 24px; }
+        .hero-tag { font-family: var(--body-font); font-size: 11px; font-weight: 500; letter-spacing: 4px; text-transform: uppercase; color: rgba(255,255,255,0.9); margin-bottom: 18px; display: block; }
+        .hero-title { font-family: var(--heading-font); font-size: clamp(38px, 6vw, 68px); font-weight: 400; color: var(--white); line-height: 1.1; margin-bottom: 18px; }
+        .hero-title em { font-style: italic; color: #E8D5A3; }
+        .hero-text { font-family: var(--body-font); font-size: 16px; font-weight: 300; color: rgba(255,255,255,0.85); margin-bottom: 32px; line-height: 1.7; max-width: 500px; margin-left: auto; margin-right: auto; }
+        .hero-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+        .btn { font-family: var(--body-font); font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; padding: 14px 30px; text-decoration: none; transition: var(--transition); border-radius: 2px; display: inline-block; cursor: pointer; }
+        .btn-primary { background: var(--warm-brown); color: var(--white); border: 2px solid var(--warm-brown); }
+        .btn-primary:hover { background: var(--warm-brown-light); border-color: var(--warm-brown-light); transform: translateY(-2px); color: var(--white); }
+        .btn-outline { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.7); }
+        .btn-outline:hover { background: var(--white); color: var(--soft-black); border-color: var(--white); transform: translateY(-2px); }
+        .hero-scroll { position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%); z-index: 10; color: rgba(255,255,255,0.8); text-align: center; animation: bounce 2s infinite; }
+        .hero-scroll span { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 4px; font-family: var(--body-font); font-weight: 500; }
+        .hero-scroll i { font-size: 12px; }
+        .hero-pagination { position: absolute; bottom: 30px !important; right: 40px !important; left: auto !important; width: auto !important; z-index: 10; }
+        .swiper-pagination-bullet { width: 8px; height: 8px; background: rgba(255,255,255,0.5); opacity: 1; margin: 0 6px !important; }
+        .swiper-pagination-bullet-active { background: #E8D5A3; width: 24px; border-radius: 4px; }
 
         @keyframes bounce {
             0%, 100% { transform: translateX(-50%) translateY(0); }
@@ -381,674 +109,184 @@
         }
 
         /* ============ SECTION COMMONS ============ */
-        section {
-            padding: 90px 0;
-        }
-        .section-label {
-            font-family: var(--body-font);
-            font-size: 11px;
-            font-weight: 500;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: var(--warm-brown);
-            display: block;
-            margin-bottom: 10px;
-        }
-        .section-title {
-            font-family: var(--heading-font);
-            font-size: clamp(28px, 4vw, 44px);
-            font-weight: 400;
-            color: var(--soft-black);
-            margin-bottom: 14px;
-            line-height: 1.2;
-        }
-        .section-title em {
-            font-style: italic;
-            color: var(--warm-brown);
-        }
-        .divider {
-            width: 40px;
-            height: 2px;
-            background: var(--warm-brown);
-            margin-bottom: 24px;
-        }
-        .section-header {
-            margin-bottom: 50px;
-        }
-        .section-header.text-center .divider {
-            margin: 0 auto 24px;
-        }
+        section { padding: 90px 0; }
+        .section-label { font-family: var(--body-font); font-size: 11px; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--warm-brown); display: block; margin-bottom: 10px; }
+        .section-title { font-family: var(--heading-font); font-size: clamp(28px, 4vw, 44px); font-weight: 400; color: var(--soft-black); margin-bottom: 14px; line-height: 1.2; }
+        .section-title em { font-style: italic; color: var(--warm-brown); }
+        .divider { width: 40px; height: 2px; background: var(--warm-brown); margin-bottom: 24px; }
+        .section-header { margin-bottom: 50px; }
+        .section-header.text-center { text-align: center; }
+        .section-header.text-center .divider { margin: 0 auto 24px; }
 
         /* ============ ABOUT ============ */
-        #about {
-            background: var(--warm-cream);
-        }
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-        .about-image {
-            position: relative;
-            border-radius: 3px;
-            overflow: hidden;
-            aspect-ratio: 4/3;
-            background: var(--warm-beige);
-        }
-        .about-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s ease;
-        }
-        .about-image:hover img {
-            transform: scale(1.03);
-        }
-        .about-text p {
-            font-size: 15px;
-            color: var(--soft-gray);
-            margin-bottom: 14px;
-            line-height: 1.8;
-        }
-        .about-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 24px;
-        }
-        .about-tag {
-            font-family: var(--body-font);
-            font-size: 10px;
-            font-weight: 500;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            padding: 8px 18px;
-            background: var(--white);
-            color: var(--warm-brown);
-            border-radius: 2px;
-            border: 1px solid var(--border-color);
-        }
+        #about { background: var(--warm-cream); }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about-image { position: relative; border-radius: 3px; overflow: hidden; aspect-ratio: 4/3; background: var(--warm-beige); }
+        .about-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+        .about-image:hover img { transform: scale(1.03); }
+        .about-text p { font-size: 15px; color: var(--soft-gray); margin-bottom: 14px; line-height: 1.8; }
+        .about-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+        .about-tag { font-family: var(--body-font); font-size: 10px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; padding: 8px 18px; background: var(--white); color: var(--warm-brown); border-radius: 2px; border: 1px solid var(--border-color); }
 
         /* ============ VISION / MISSION ============ */
-        #vision {
-            background: var(--white);
-        }
-        .vm-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
-        .vm-card {
-            padding: 45px 40px;
-            background: var(--warm-cream);
-            border-radius: 3px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .vm-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-        .vm-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--warm-brown);
-            color: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 17px;
-            margin-bottom: 20px;
-        }
-        .vm-card h3 {
-            font-family: var(--heading-font);
-            font-size: 22px;
-            font-weight: 400;
-            margin-bottom: 12px;
-        }
-        .vm-card p {
-            font-size: 14px;
-            color: var(--soft-gray);
-            line-height: 1.8;
-        }
+        #vision { background: var(--white); }
+        .vm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .vm-card { padding: 45px 40px; background: var(--warm-cream); border-radius: 3px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .vm-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .vm-icon { width: 48px; height: 48px; background: var(--warm-brown); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 17px; margin-bottom: 20px; }
+        .vm-card h3 { font-family: var(--heading-font); font-size: 22px; font-weight: 400; margin-bottom: 12px; }
+        .vm-card p { font-size: 14px; color: var(--soft-gray); line-height: 1.8; }
 
         /* ============ SERVICES ============ */
-        #services {
-            background: var(--warm-cream);
-        }
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-        .service-card {
-            background: var(--white);
-            border-radius: 3px;
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .service-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-        }
-        .service-img {
-            aspect-ratio: 4/3;
-            overflow: hidden;
-        }
-        .service-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        .service-card:hover .service-img img {
-            transform: scale(1.05);
-        }
-        .service-body {
-            padding: 28px 24px;
-        }
-        .service-body h3 {
-            font-family: var(--heading-font);
-            font-size: 20px;
-            font-weight: 400;
-            margin-bottom: 10px;
-        }
-        .service-body p {
-            font-size: 13px;
-            color: var(--soft-gray);
-            line-height: 1.7;
-            margin-bottom: 16px;
-        }
-        .service-features {
-            list-style: none;
-        }
-        .service-features li {
-            font-size: 13px;
-            color: var(--soft-gray);
-            padding: 5px 0;
-            display: flex;
-            align-items: center;
-            gap: 9px;
-        }
-        .service-features li i {
-            color: var(--warm-brown);
-            font-size: 9px;
-        }
+        #services { background: var(--warm-cream); }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+        .service-card { background: var(--white); border-radius: 3px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .service-card:hover { transform: translateY(-6px); box-shadow: 0 15px 40px rgba(0,0,0,0.08); }
+        .service-img { aspect-ratio: 4/3; overflow: hidden; }
+        .service-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .service-card:hover .service-img img { transform: scale(1.05); }
+        .service-body { padding: 28px 24px; }
+        .service-body h3 { font-family: var(--heading-font); font-size: 20px; font-weight: 400; margin-bottom: 10px; }
+        .service-body p { font-size: 13px; color: var(--soft-gray); line-height: 1.7; margin-bottom: 16px; }
+        .service-features { list-style: none; }
+        .service-features li { font-size: 13px; color: var(--soft-gray); padding: 5px 0; display: flex; align-items: center; gap: 9px; }
+        .service-features li i { color: var(--warm-brown); font-size: 9px; }
 
         /* ============ WHY US ============ */
-        #why {
-            background: var(--white);
-        }
-        .why-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-        .why-list {
-            list-style: none;
-        }
-        .why-item {
-            display: flex;
-            gap: 20px;
-            padding: 20px 0;
-            border-bottom: 1px solid var(--border-color);
-            transition: padding 0.3s ease;
-        }
-        .why-item:hover {
-            padding-left: 10px;
-        }
-        .why-num {
-            font-family: var(--heading-font);
-            font-size: 34px;
-            color: var(--warm-brown);
-            opacity: 0.35;
-            line-height: 1;
-            min-width: 40px;
-        }
-        .why-item h4 {
-            font-family: var(--body-font);
-            font-size: 13px;
-            font-weight: 500;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            margin-bottom: 5px;
-        }
-        .why-item p {
-            font-size: 13px;
-            color: var(--soft-gray);
-            line-height: 1.7;
-        }
-        .why-image {
-            border-radius: 3px;
-            overflow: hidden;
-            aspect-ratio: 3/4;
-            background: var(--warm-beige);
-        }
-        .why-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+        #why { background: var(--white); }
+        .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .why-list { list-style: none; }
+        .why-item { display: flex; gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--border-color); transition: padding 0.3s ease; }
+        .why-item:hover { padding-left: 10px; }
+        .why-num { font-family: var(--heading-font); font-size: 34px; color: var(--warm-brown); opacity: 0.35; line-height: 1; min-width: 40px; }
+        .why-item h4 { font-family: var(--body-font); font-size: 13px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 5px; }
+        .why-item p { font-size: 13px; color: var(--soft-gray); line-height: 1.7; }
+        .why-image { border-radius: 3px; overflow: hidden; aspect-ratio: 3/4; background: var(--warm-beige); }
+        .why-image img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* ============ ARTICLES TEASER ============ */
+        #articles-teaser { background: var(--white); }
+        .articles-teaser-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start; }
+        .article-featured { position: relative; border-radius: 3px; overflow: hidden; background: var(--warm-cream); transition: transform 0.3s ease, box-shadow 0.3s ease; display: block; }
+        .article-featured:hover { transform: translateY(-4px); box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+        .article-featured-img { aspect-ratio: 16/9; overflow: hidden; }
+        .article-featured-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .article-featured:hover .article-featured-img img { transform: scale(1.04); }
+        .article-featured-body { padding: 32px; }
+        .article-meta { font-family: var(--body-font); font-size: 10px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--warm-brown); margin-bottom: 8px; display: block; }
+        .article-featured-body h3 { font-size: 28px; margin-bottom: 12px; line-height: 1.3; }
+        .article-featured-body p { font-size: 14px; color: var(--soft-gray); line-height: 1.8; margin-bottom: 20px; }
+        .btn-link { font-family: var(--body-font); font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--warm-brown); position: relative; display: inline-block; transition: color 0.3s ease; }
+        .btn-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 1px; background: var(--warm-brown); transition: width 0.3s ease; }
+        .btn-link:hover { color: var(--warm-brown-light); }
+        .btn-link i { font-size: 10px; margin-left: 4px; transition: transform 0.3s ease; }
+        .btn-link:hover i { transform: translateX(4px); }
+        .articles-side-list { display: flex; flex-direction: column; gap: 20px; }
+        .article-mini { display: flex; gap: 20px; background: var(--warm-cream); border-radius: 3px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .article-mini:hover { transform: translateX(4px); box-shadow: 0 8px 24px rgba(0,0,0,0.06); }
+        .article-mini-img { width: 140px; min-width: 140px; aspect-ratio: 1/1; overflow: hidden; }
+        .article-mini-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+        .article-mini:hover .article-mini-img img { transform: scale(1.06); }
+        .article-mini-body { padding: 16px 16px 16px 0; display: flex; flex-direction: column; justify-content: center; }
+        .article-mini-body h4 { font-size: 16px; margin-bottom: 4px; line-height: 1.3; }
+        .article-mini-body .article-meta { margin-bottom: 0; }
 
         /* ============ VALUES ============ */
-        #values {
-            background: var(--warm-cream);
-        }
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-        .value-card {
-            background: var(--white);
-            padding: 32px 28px;
-            border-radius: 3px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .value-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-        .value-icon {
-            width: 52px;
-            height: 52px;
-            background: var(--warm-beige);
-            color: var(--warm-brown);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 16px;
-            font-size: 19px;
-        }
-        .value-card h4 {
-            font-family: var(--body-font);
-            font-size: 12px;
-            font-weight: 500;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-        }
-        .value-card p {
-            font-size: 13px;
-            color: var(--soft-gray);
-            line-height: 1.6;
-        }
+        #values { background: var(--warm-cream); }
+        .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+        .value-card { background: var(--white); padding: 32px 28px; border-radius: 3px; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .value-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .value-icon { width: 52px; height: 52px; background: var(--warm-beige); color: var(--warm-brown); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 19px; }
+        .value-card h4 { font-family: var(--body-font); font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px; }
+        .value-card p { font-size: 13px; color: var(--soft-gray); line-height: 1.6; }
 
         /* ============ TEAM ============ */
-        #team {
-            background: var(--white);
-        }
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
-        }
-        .team-card {
-            text-align: center;
-            padding: 32px 20px;
-            background: var(--warm-cream);
-            border-radius: 3px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .team-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-        .team-avatar {
-            width: 76px;
-            height: 76px;
-            border-radius: 50%;
-            background: var(--warm-beige);
-            margin: 0 auto 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: var(--heading-font);
-            font-size: 26px;
-            color: var(--warm-brown);
-        }
-        .team-card h4 {
-            font-family: var(--body-font);
-            font-size: 13px;
-            font-weight: 500;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-        .team-card .role {
-            font-size: 11px;
-            color: var(--warm-brown);
-            font-weight: 400;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin: 4px 0 8px;
-        }
-        .team-card .bio {
-            font-size: 12px;
-            color: var(--soft-gray);
-            line-height: 1.6;
-        }
+        #team { background: var(--white); }
+        .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
+        .team-card { text-align: center; padding: 32px 20px; background: var(--warm-cream); border-radius: 3px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .team-card:hover { transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .team-avatar { width: 76px; height: 76px; border-radius: 50%; background: var(--warm-beige); margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; font-family: var(--heading-font); font-size: 26px; color: var(--warm-brown); }
+        .team-card h4 { font-family: var(--body-font); font-size: 13px; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; }
+        .team-card .role { font-size: 11px; color: var(--warm-brown); font-weight: 400; letter-spacing: 1px; text-transform: uppercase; margin: 4px 0 8px; }
+        .team-card .bio { font-size: 12px; color: var(--soft-gray); line-height: 1.6; }
 
         /* ============ IMPACT ============ */
-        #impact {
-            background: var(--warm-brown);
-            color: var(--white);
-        }
-        #impact .section-label {
-            color: #E8D5A3;
-        }
-        #impact .section-title {
-            color: var(--white);
-        }
-        #impact .divider {
-            background: #E8D5A3;
-        }
-        .impact-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
-            margin-top: 40px;
-        }
-        .impact-card {
-            text-align: center;
-            padding: 32px 20px;
-            background: rgba(255,255,255,0.08);
-            border-radius: 3px;
-        }
-        .impact-card i {
-            font-size: 28px;
-            color: #E8D5A3;
-            margin-bottom: 16px;
-        }
-        .impact-card h4 {
-            font-family: var(--body-font);
-            font-size: 12px;
-            font-weight: 500;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-            color: var(--white);
-            margin-bottom: 8px;
-        }
-        .impact-card p {
-            font-size: 12px;
-            opacity: 0.8;
-            line-height: 1.6;
-        }
+        #impact { background: var(--warm-brown); color: var(--white); }
+        #impact .section-label { color: #E8D5A3; }
+        #impact .section-title { color: var(--white); }
+        #impact .divider { background: #E8D5A3; }
+        .impact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; margin-top: 40px; }
+        .impact-card { text-align: center; padding: 32px 20px; background: rgba(255,255,255,0.08); border-radius: 3px; }
+        .impact-card i { font-size: 28px; color: #E8D5A3; margin-bottom: 16px; }
+        .impact-card h4 { font-family: var(--body-font); font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: var(--white); margin-bottom: 8px; }
+        .impact-card p { font-size: 12px; opacity: 0.8; line-height: 1.6; }
 
         /* ============ CONTACT ============ */
-        #contact {
-            background: var(--warm-cream);
-        }
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: start;
-        }
-        .contact-info-item {
-            display: flex;
-            gap: 16px;
-            margin-bottom: 22px;
-        }
-        .contact-icon {
-            width: 42px;
-            height: 42px;
-            min-width: 42px;
-            background: var(--warm-brown);
-            color: var(--white);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 15px;
-        }
-        .contact-info-item h5 {
-            font-family: var(--body-font);
-            font-size: 10px;
-            font-weight: 500;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--warm-brown);
-            margin-bottom: 3px;
-        }
-        .contact-info-item p, .contact-info-item a {
-            font-size: 14px;
-            color: var(--soft-gray);
-        }
-        .contact-form .form-group {
-            margin-bottom: 15px;
-        }
-        .contact-form label {
-            font-family: var(--body-font);
-            font-size: 10px;
-            font-weight: 500;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--warm-brown);
-            display: block;
-            margin-bottom: 5px;
-        }
-        .contact-form input,
-        .contact-form textarea,
-        .contact-form select {
-            width: 100%;
-            padding: 12px 14px;
-            border: 1px solid var(--border-color);
-            border-radius: 2px;
-            font-family: var(--body-font);
-            font-size: 14px;
-            background: var(--white);
-            transition: border-color 0.3s ease;
-            outline: none;
-        }
-        .contact-form input:focus,
-        .contact-form textarea:focus,
-        .contact-form select:focus {
-            border-color: var(--warm-brown);
-        }
-        .contact-form textarea {
-            height: 120px;
-            resize: vertical;
-        }
-        .contact-form .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-        .btn-submit {
-            width: 100%;
-            padding: 14px;
-            background: var(--warm-brown);
-            color: var(--white);
-            border: none;
-            border-radius: 2px;
-            font-family: var(--body-font);
-            font-size: 12px;
-            font-weight: 500;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: background 0.3s ease, transform 0.3s ease;
-        }
-        .btn-submit:hover {
-            background: var(--warm-brown-light);
-            transform: translateY(-2px);
-        }
+        #contact { background: var(--white); }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+        .contact-info-item { display: flex; gap: 16px; margin-bottom: 22px; }
+        .contact-icon { width: 42px; height: 42px; min-width: 42px; background: var(--warm-brown); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 15px; }
+        .contact-info-item h5 { font-family: var(--body-font); font-size: 10px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--warm-brown); margin-bottom: 3px; }
+        .contact-info-item p, .contact-info-item a { font-size: 14px; color: var(--soft-gray); }
+        .contact-form .form-group { margin-bottom: 15px; }
+        .contact-form label { font-family: var(--body-font); font-size: 10px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--warm-brown); display: block; margin-bottom: 5px; }
+        .contact-form input, .contact-form textarea, .contact-form select { width: 100%; padding: 12px 14px; border: 1px solid var(--border-color); border-radius: 2px; font-family: var(--body-font); font-size: 14px; background: var(--white); transition: border-color 0.3s ease; outline: none; }
+        .contact-form input:focus, .contact-form textarea:focus, .contact-form select:focus { border-color: var(--warm-brown); }
+        .contact-form textarea { height: 120px; resize: vertical; }
+        .contact-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .btn-submit { width: 100%; padding: 14px; background: var(--warm-brown); color: var(--white); border: none; border-radius: 2px; font-family: var(--body-font); font-size: 12px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: background 0.3s ease, transform 0.3s ease; }
+        .btn-submit:hover { background: var(--warm-brown-light); transform: translateY(-2px); }
 
         /* ============ FOOTER ============ */
-        footer {
-            background: var(--soft-black);
-            color: rgba(255,255,255,0.7);
-            padding: 60px 0 30px;
-        }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        .footer-brand img {
-            height: 38px;
-            margin-bottom: 14px;
-        }
-        .footer-brand p {
-            font-size: 13px;
-            line-height: 1.8;
-            opacity: 0.55;
-            max-width: 280px;
-        }
-        .footer-col h5 {
-            font-family: var(--body-font);
-            font-size: 11px;
-            font-weight: 500;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #E8D5A3;
-            margin-bottom: 18px;
-        }
-        .footer-col ul {
-            list-style: none;
-        }
-        .footer-col ul li {
-            margin-bottom: 9px;
-        }
-        .footer-col ul a {
-            font-size: 13px;
-            color: rgba(255,255,255,0.5);
-            transition: color 0.3s ease;
-        }
-        .footer-col ul a:hover {
-            color: var(--white);
-        }
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 12px;
-            opacity: 0.5;
-        }
-        .social-links {
-            display: flex;
-            gap: 12px;
-        }
-        .social-links a {
-            width: 36px;
-            height: 36px;
-            border: 1px solid rgba(255,255,255,0.2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255,255,255,0.5);
-            transition: all 0.3s ease;
-            font-size: 14px;
-        }
-        .social-links a:hover {
-            background: var(--warm-brown);
-            border-color: var(--warm-brown);
-            color: var(--white);
-        }
+        footer { background: var(--soft-black); color: rgba(255,255,255,0.7); padding: 60px 0 30px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+        .footer-brand img { height: 38px; margin-bottom: 14px; }
+        .footer-brand p { font-size: 13px; line-height: 1.8; opacity: 0.55; max-width: 280px; }
+        .footer-col h5 { font-family: var(--body-font); font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: #E8D5A3; margin-bottom: 18px; }
+        .footer-col ul { list-style: none; }
+        .footer-col ul li { margin-bottom: 9px; }
+        .footer-col ul a { font-size: 13px; color: rgba(255,255,255,0.5); transition: color 0.3s ease; }
+        .footer-col ul a:hover { color: var(--white); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; opacity: 0.5; }
+        .social-links { display: flex; gap: 12px; }
+        .social-links a { width: 36px; height: 36px; border: 1px solid rgba(255,255,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); transition: all 0.3s ease; font-size: 14px; }
+        .social-links a:hover { background: var(--warm-brown); border-color: var(--warm-brown); color: var(--white); }
 
         /* ============ SCROLL REVEAL ============ */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
-        }
-        .reveal.visible {
-            opacity: 1;
-            transform: none;
-        }
+        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .reveal.visible { opacity: 1; transform: none; }
 
         /* ============ RESPONSIVE ============ */
         @media (max-width: 1024px) {
-            .container {
-                padding: 0 24px;
-            }
-            .services-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            .values-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            .team-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            .impact-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
+            .container { padding: 0 24px; }
+            .services-grid { grid-template-columns: 1fr 1fr; }
+            .values-grid { grid-template-columns: 1fr 1fr; }
+            .team-grid { grid-template-columns: 1fr 1fr; }
+            .impact-grid { grid-template-columns: 1fr 1fr; }
+            .articles-teaser-grid { grid-template-columns: 1fr; gap: 30px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .article-mini-img { width: 100px; min-width: 100px; }
         }
-
         @media (max-width: 768px) {
-            .navbar {
-                padding: 15px 24px;
-            }
-            .navbar.scrolled {
-                padding: 10px 24px;
-            }
-            /* Hide desktop nav, show hamburger */
-            .nav-links {
-                display: none;
-            }
-            .hamburger {
-                display: flex;
-            }
-            section {
-                padding: 60px 0;
-            }
-            .about-grid,
-            .why-grid,
-            .contact-grid,
-            .vm-grid {
-                grid-template-columns: 1fr;
-                gap: 35px;
-            }
-            .services-grid,
-            .values-grid,
-            .team-grid,
-            .impact-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-            .contact-form .form-row {
-                grid-template-columns: 1fr;
-            }
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-            .hero-pagination {
-                right: 20px !important;
-                bottom: 20px !important;
-            }
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
+            .navbar { padding: 15px 24px; }
+            .navbar.scrolled { padding: 10px 24px; }
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            section { padding: 60px 0; }
+            .about-grid, .why-grid, .contact-grid, .vm-grid { grid-template-columns: 1fr; gap: 35px; }
+            .services-grid, .values-grid, .team-grid, .impact-grid { grid-template-columns: 1fr 1fr; }
+            .contact-form .form-row { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+            .hero-pagination { right: 20px !important; bottom: 20px !important; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .articles-teaser-grid { grid-template-columns: 1fr; }
+            .article-mini { flex-direction: column; }
+            .article-mini-img { width: 100%; min-width: 100%; aspect-ratio: 16/9; }
         }
-
         @media (max-width: 480px) {
-            .container {
-                padding: 0 16px;
-            }
-            .services-grid,
-            .values-grid,
-            .team-grid,
-            .impact-grid {
-                grid-template-columns: 1fr;
-            }
-            .footer-bottom {
-                flex-direction: column;
-                gap: 14px;
-                text-align: center;
-            }
+            .container { padding: 0 16px; }
+            .services-grid, .values-grid, .team-grid, .impact-grid { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 14px; text-align: center; }
         }
     </style>
 </head>
@@ -1057,28 +295,26 @@
 <!-- ==================== NAVIGATION ==================== -->
 <nav class="navbar" id="navbar">
     <a href="#" class="nav-logo">
-        <img src="img/logo1.png" alt="Joan Investments">
+        <img src="img/logo2.png" alt="Joan Investments">
     </a>
     <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#why">Why Us</a></li>
+        <li><a href="#articles-teaser">Stories</a></li>
         <li><a href="#team">Team</a></li>
         <li><a href="#impact">Impact</a></li>
         <li><a href="#contact" class="nav-cta">Contact</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Menu">
-        <span></span>
-        <span></span>
-        <span></span>
+        <span></span><span></span><span></span>
     </button>
 </nav>
-
-<!-- Mobile Menu Overlay -->
 <div class="mobile-menu-overlay" id="mobileMenu">
     <a href="#about">About</a>
     <a href="#services">Services</a>
     <a href="#why">Why Us</a>
+    <a href="#articles-teaser">Stories</a>
     <a href="#team">Team</a>
     <a href="#impact">Impact</a>
     <a href="#contact" class="mobile-cta">Contact</a>
@@ -1088,51 +324,47 @@
 <section class="hero" id="hero">
     <div class="swiper swiper-hero">
         <div class="swiper-wrapper">
-            <!-- Slide 1 - Leather -->
             <div class="swiper-slide hero-slide" style="background-image: url('img/hero-leather.jpg');">
                 <div class="hero-content">
                     <span class="hero-tag">Handcrafted in Malawi</span>
                     <h1 class="hero-title">Real Leather, <em>Real Quality</em></h1>
-                    <p class="hero-text">Discover handmade leather shoes, bags, belts, and wallets — crafted with care for those who appreciate authenticity.</p>
+                    <p class="hero-text">Handmade shoes, handbags, wallets, and belts — crafted from locally sourced materials with authenticity and care.</p>
                     <div class="hero-buttons">
-                        <a href="#services" class="btn btn-primary">Explore Leather</a>
-                        <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                        <a href="#services" class="btn btn-primary">Our Services</a>
+                        <a href="#contact" class="btn btn-outline">Contact Us</a>
                     </div>
                 </div>
             </div>
-            <!-- Slide 2 - Laundry -->
             <div class="swiper-slide hero-slide" style="background-image: url('img/hero-laundry.jpg');">
                 <div class="hero-content">
                     <span class="hero-tag">Professional Care</span>
                     <h1 class="hero-title">Fresh & <em>Clean</em></h1>
-                    <p class="hero-text">Professional dry cleaning and laundry using eco-friendly detergents — for individuals, families, and businesses.</p>
+                    <p class="hero-text">Professional dry cleaning and laundry services with eco-friendly detergents and modern machines — for individuals and companies.</p>
                     <div class="hero-buttons">
                         <a href="#services" class="btn btn-primary">Our Services</a>
                         <a href="#contact" class="btn btn-outline">Book Now</a>
                     </div>
                 </div>
             </div>
-            <!-- Slide 3 - Wedding -->
             <div class="swiper-slide hero-slide" style="background-image: url('img/hero-wedding.jpg');">
                 <div class="hero-content">
                     <span class="hero-tag">Your Special Day</span>
                     <h1 class="hero-title">Arrive in <em>Elegance</em></h1>
-                    <p class="hero-text">Make your wedding unforgettable with our luxury car hire service — complete with professional chauffeurs.</p>
+                    <p class="hero-text">Elegant wedding car hire with professional chauffeurs — plus wedding dresses and everything for your big day.</p>
                     <div class="hero-buttons">
                         <a href="#services" class="btn btn-primary">Wedding Cars</a>
                         <a href="#contact" class="btn btn-outline">Enquire Now</a>
                     </div>
                 </div>
             </div>
-            <!-- Slide 4 - Community -->
             <div class="swiper-slide hero-slide" style="background-image: url('img/hero-community.jpg');">
                 <div class="hero-content">
                     <span class="hero-tag">Empowering Communities</span>
                     <h1 class="hero-title">Quality with <em>Purpose</em></h1>
-                    <p class="hero-text">Creating jobs for women, youth, and people with disabilities while delivering exceptional lifestyle solutions across Malawi.</p>
+                    <p class="hero-text">Creating jobs for women, youth, and people with disabilities while delivering quality lifestyle solutions across Malawi.</p>
                     <div class="hero-buttons">
                         <a href="#impact" class="btn btn-primary">Our Impact</a>
-                        <a href="#about" class="btn btn-outline">Learn More</a>
+                        <a href="#about" class="btn btn-outline">About Us</a>
                     </div>
                 </div>
             </div>
@@ -1156,8 +388,8 @@
                 <span class="section-label">Who We Are</span>
                 <h2 class="section-title">Crafting Quality <em>Lifestyle</em> Solutions</h2>
                 <div class="divider"></div>
-                <p>Joan Investments is a proudly Malawian company providing exceptional lifestyle solutions — from handcrafted leather products to professional dry cleaning and elegant wedding car hire.</p>
-                <p>We are committed to empowering women, youth, and people with disabilities through meaningful employment. Every product and service reflects our dedication to authenticity, quality, and community impact.</p>
+                <p>Joan Investments is a Malawian company that provides high-quality lifestyle solutions. We empower women, youth, and people with disabilities by offering them meaningful jobs. We specialize in handcrafted real leather products including shoes, bags, belts, and wallets, professional dry cleaning and laundry, and elegant wedding car hire with chauffeurs.</p>
+                <p>We focus on authenticity, quality, and sustainability in everything we do.</p>
                 <div class="about-tags">
                     <span class="about-tag">Authentic</span>
                     <span class="about-tag">Handcrafted</span>
@@ -1177,12 +409,12 @@
             <div class="vm-card">
                 <div class="vm-icon"><i class="fa-solid fa-eye"></i></div>
                 <h3>Our Vision</h3>
-                <p>To become Malawi's leading provider of lifestyle solutions, renowned for handcrafted quality, exceptional service, and positive community impact across Blantyre, Lilongwe, Mzuzu, and beyond.</p>
+                <p>To become Malawi's leading provider of lifestyle solutions, known for handcrafted quality, excellent service, and positive community impact.</p>
             </div>
             <div class="vm-card">
                 <div class="vm-icon"><i class="fa-solid fa-bullseye"></i></div>
                 <h3>Our Mission</h3>
-                <p>To deliver high-quality, customer-focused lifestyle solutions while empowering marginalized groups through sustainable employment, training, and economic opportunities.</p>
+                <p>To deliver high-quality, customer-focused lifestyle solutions while empowering women, youth, and people with disabilities.</p>
             </div>
         </div>
     </div>
@@ -1202,13 +434,13 @@
                     <img src="img/service-leather.jpg" alt="Leather Products" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #8B6914, #A67C1E)'; this.parentElement.innerHTML+='<div style=display:flex;align-items:center;justify-content:center;height:100%;color:white;font-size:48px;'><i class=fa-solid fa-shoe-prints></i></div>';">
                 </div>
                 <div class="service-body">
-                    <h3>Handcrafted Leather</h3>
-                    <p>Genuine leather products made with skill and care — designed to last and tell a story.</p>
+                    <h3>Real Leather Products & Accessories</h3>
+                    <p>Handmade shoes, handbags, wallets, and belts — made from locally sourced materials, durable, stylish, and can be personalized.</p>
                     <ul class="service-features">
                         <li><i class="fa-solid fa-check"></i> Handmade shoes & sandals</li>
                         <li><i class="fa-solid fa-check"></i> Designer handbags</li>
                         <li><i class="fa-solid fa-check"></i> Leather wallets & belts</li>
-                        <li><i class="fa-solid fa-check"></i> Custom personalization</li>
+                        <li><i class="fa-solid fa-check"></i> Custom personalization available</li>
                     </ul>
                 </div>
             </div>
@@ -1217,13 +449,13 @@
                     <img src="img/service-laundry.jpg" alt="Laundry Service" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #5B8C5A, #7BAE7F)'; this.parentElement.innerHTML+='<div style=display:flex;align-items:center;justify-content:center;height:100%;color:white;font-size:48px;'><i class=fa-solid fa-shirt></i></div>';">
                 </div>
                 <div class="service-body">
-                    <h3>Laundry & Dry Cleaning</h3>
-                    <p>Professional cleaning with modern machines and eco-friendly detergents.</p>
+                    <h3>Dry Cleaning & Laundry Services</h3>
+                    <p>Professional cleaning, ironing, and alterations — for individuals and companies, using eco-friendly detergents and modern machines.</p>
                     <ul class="service-features">
-                        <li><i class="fa-solid fa-check"></i> Dry cleaning services</li>
-                        <li><i class="fa-solid fa-check"></i> Professional laundry</li>
-                        <li><i class="fa-solid fa-check"></i> Ironing & alterations</li>
-                        <li><i class="fa-solid fa-check"></i> Eco-friendly products</li>
+                        <li><i class="fa-solid fa-check"></i> Professional dry cleaning</li>
+                        <li><i class="fa-solid fa-check"></i> Laundry & ironing</li>
+                        <li><i class="fa-solid fa-check"></i> Alterations available</li>
+                        <li><i class="fa-solid fa-check"></i> Eco-friendly detergents</li>
                     </ul>
                 </div>
             </div>
@@ -1232,13 +464,13 @@
                     <img src="img/service-wedding.jpg" alt="Wedding Car Hire" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #6B3A5B, #9B5A8B)'; this.parentElement.innerHTML+='<div style=display:flex;align-items:center;justify-content:center;height:100%;color:white;font-size:48px;'><i class=fa-solid fa-car-side></i></div>';">
                 </div>
                 <div class="service-body">
-                    <h3>Wedding Car Hire</h3>
-                    <p>Make your special day memorable with our elegant wedding car service.</p>
+                    <h3>Wedding Car Hire & Accessories</h3>
+                    <p>Elegant wedding car hire with chauffeurs, plus wedding dresses and everything for your special day.</p>
                     <ul class="service-features">
-                        <li><i class="fa-solid fa-check"></i> Luxury vehicles</li>
+                        <li><i class="fa-solid fa-check"></i> Elegant wedding cars</li>
                         <li><i class="fa-solid fa-check"></i> Professional chauffeurs</li>
-                        <li><i class="fa-solid fa-check"></i> Car decoration included</li>
-                        <li><i class="fa-solid fa-check"></i> Flexible packages</li>
+                        <li><i class="fa-solid fa-check"></i> Wedding dresses for hire</li>
+                        <li><i class="fa-solid fa-check"></i> Complete wedding accessories</li>
                     </ul>
                 </div>
             </div>
@@ -1259,41 +491,96 @@
                         <span class="why-num">01</span>
                         <div>
                             <h4>One Brand, Many Solutions</h4>
-                            <p>Leather goods, laundry, and wedding hire — all from one trusted Malawian brand.</p>
+                            <p>We offer leather goods, laundry, and wedding hire — all from one trusted Malawian brand.</p>
                         </div>
                     </li>
                     <li class="why-item">
                         <span class="why-num">02</span>
                         <div>
-                            <h4>Handcrafted Excellence</h4>
-                            <p>Every product is handmade with attention to detail and can be personalized to your taste.</p>
+                            <h4>Handcrafted & Personalized</h4>
+                            <p>Every leather product is handmade and can be customized to your personal taste.</p>
                         </div>
                     </li>
                     <li class="why-item">
                         <span class="why-num">03</span>
                         <div>
-                            <h4>Social Impact</h4>
-                            <p>We create jobs for women, youth, and people with disabilities across Malawi.</p>
+                            <h4>Jobs for Marginalized Groups</h4>
+                            <p>We create meaningful employment for women, youth, and people with disabilities.</p>
                         </div>
                     </li>
                     <li class="why-item">
                         <span class="why-num">04</span>
                         <div>
-                            <h4>Eco-Conscious</h4>
-                            <p>Environmentally friendly practices and locally sourced materials.</p>
+                            <h4>Eco-Conscious Practices</h4>
+                            <p>We use eco-friendly detergents and sustainable methods across all our services.</p>
                         </div>
                     </li>
                     <li class="why-item">
                         <span class="why-num">05</span>
                         <div>
                             <h4>Trusted Local Brand</h4>
-                            <p>Built on trust, quality, and loyal customers throughout Malawi.</p>
+                            <p>A trusted Malawian brand with loyal customers across Blantyre, Lilongwe, and Mzuzu.</p>
                         </div>
                     </li>
                 </ul>
             </div>
             <div class="why-image">
-                <img src="img/why-us.jpg" alt="Why Choose Joan Investments" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #8B6914, #A67C1E)'; this.parentElement.innerHTML+='<div style=display:flex;align-items:center;justify-content:center;height:100%;color:white;text-align:center;padding:32px;font-family:Marcellus,serif;font-size:22px;font-style:italic;line-height:1.6;'>Quality is not an act — it is our habit, delivered with every product and every service.</div>';">
+                <img src="img/why-us.jpg" alt="Why Choose Joan Investments" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #8B6914, #A67C1E)'; this.parentElement.innerHTML+='<div style=display:flex;align-items:center;justify-content:center;height:100%;color:white;text-align:center;padding:32px;font-family:Marcellus,serif;font-size:22px;font-style:italic;line-height:1.6;'>Empowering communities through quality lifestyle solutions.</div>';">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== ARTICLES TEASER ==================== -->
+<section id="articles-teaser">
+    <div class="container">
+        <div class="section-header reveal">
+            <span class="section-label">From Our Workshop</span>
+            <h2 class="section-title">Stories <em>From Joan</em></h2>
+            <div class="divider"></div>
+        </div>
+        <div class="articles-teaser-grid reveal">
+            <!-- Featured Article - Minister Visit -->
+            <a href="#" class="article-featured">
+                <div class="article-featured-img">
+                    <img src="img/article-minister-visit.jpg" alt="Minister Visits Joan Investments" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #8B6914, #A67C1E)'; this.parentElement.innerHTML+='<div style=display:flex;align-items:center;justify-content:center;height:100%;color:white;font-size:48px;'><i class=fa-solid fa-landmark></i></div>';">
+                </div>
+                <div class="article-featured-body">
+                    <span class="article-meta">News</span>
+                    <h3>Honourable Minister Visits Joan Investments, Commends Handcrafted Quality & Community Impact</h3>
+                    <p>A government minister toured our Blantyre workshop, inspected handcrafted leather shoes, bags, belts, and wallets made from locally sourced materials, and praised our commitment to empowering women, youth, and people with disabilities through meaningful employment...</p>
+              
+                </div>
+            </a>
+            <!-- Side Mini Articles -->
+            <div class="articles-side-list">
+                <a href="article-quality.html" class="article-mini">
+                    <div class="article-mini-img">
+                        <img src="img/article-quality-craftsmanship.jpg" alt="Quality Craftsmanship" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #8B6914, #A67C1E)'; this.parentElement.innerHTML+='<div style=display:flex;align-items:center;justify-content:center;height:100%;color:white;font-size:32px;'><i class=fa-solid fa-hands></i></div>';">
+                    </div>
+                    <div class="article-mini-body">
+                        <span class="article-meta">Craftsmanship</span>
+                        <h4>Authenticity & Quality: Real Handmade Leather Products From Malawi</h4>
+                    </div>
+                </a>
+                <a href="article-sustainability.html" class="article-mini">
+                    <div class="article-mini-img">
+                        <img src="img/article-eco-friendly.jpg" alt="Eco-Friendly Laundry" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #5B8C5A, #7BAE7F)'; this.parentElement.innerHTML+='<div style=display:flex;align-items:center;justify-content:center;height:100%;color:white;font-size:32px;'><i class=fa-solid fa-leaf></i></div>';">
+                    </div>
+                    <div class="article-mini-body">
+                        <span class="article-meta">Sustainability</span>
+                        <h4>Eco-Friendly Practices: Our Dry Cleaning & Laundry Services</h4>
+                    </div>
+                </a>
+                <a href="article-wedding.html" class="article-mini">
+                    <div class="article-mini-img">
+                        <img src="img/article-wedding-services.jpg" alt="Wedding Services" onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #6B3A5B, #9B5A8B)'; this.parentElement.innerHTML+='<div style=display:flex;align-items:center;justify-content:center;height:100%;color:white;font-size:32px;'><i class=fa-solid fa-car-side></i></div>';">
+                    </div>
+                    <div class="article-mini-body">
+                        <span class="article-meta">Weddings</span>
+                        <h4>Elegant Wedding Car Hire & Accessories For Your Special Day</h4>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
@@ -1310,33 +597,33 @@
         <div class="values-grid reveal">
             <div class="value-card">
                 <div class="value-icon"><i class="fa-solid fa-hands"></i></div>
-                <h4>Authentic Craftsmanship</h4>
-                <p>Real handmade quality using genuine materials and time-honored techniques.</p>
+                <h4>Authenticity & Craftsmanship</h4>
+                <p>Real handmade quality using genuine materials.</p>
             </div>
             <div class="value-card">
                 <div class="value-icon"><i class="fa-solid fa-heart"></i></div>
-                <h4>Customer-Centric</h4>
-                <p>We put our customers first, exceeding expectations with every interaction.</p>
+                <h4>Customer-Centricity</h4>
+                <p>We put our customers first in everything we do.</p>
             </div>
             <div class="value-card">
                 <div class="value-icon"><i class="fa-solid fa-leaf"></i></div>
                 <h4>Sustainability</h4>
-                <p>Eco-friendly practices and locally sourced, sustainable materials.</p>
+                <p>Eco-friendly practices across all our operations.</p>
             </div>
             <div class="value-card">
                 <div class="value-icon"><i class="fa-solid fa-people-group"></i></div>
-                <h4>Empowerment</h4>
-                <p>Creating meaningful jobs for marginalized groups throughout Malawi.</p>
+                <h4>Empowerment & Inclusion</h4>
+                <p>Jobs for women, youth, and people with disabilities.</p>
             </div>
             <div class="value-card">
                 <div class="value-icon"><i class="fa-solid fa-lightbulb"></i></div>
-                <h4>Innovation</h4>
-                <p>Continuously improving products and services to serve you better.</p>
+                <h4>Innovation & Excellence</h4>
+                <p>Always improving our products and services.</p>
             </div>
             <div class="value-card">
                 <div class="value-icon"><i class="fa-solid fa-house-chimney"></i></div>
                 <h4>Community Impact</h4>
-                <p>Investing in local communities through training and mentorship.</p>
+                <p>Training and mentorship for the community.</p>
             </div>
         </div>
     </div>
@@ -1347,7 +634,7 @@
     <div class="container">
         <div class="section-header text-center reveal">
             <span class="section-label">Our People</span>
-            <h2 class="section-title">Meet The <em>Team</em></h2>
+            <h2 class="section-title">Management <em>Team</em></h2>
             <div class="divider"></div>
         </div>
         <div class="team-grid reveal">
@@ -1360,20 +647,20 @@
             <div class="team-card">
                 <div class="team-avatar">DO</div>
                 <h4>Director of Operations</h4>
-                <p class="role">Operations & Delivery</p>
-                <p class="bio">Oversees workflow, quality control, and service delivery across all departments.</p>
+                <p class="role">Operations & Service Delivery</p>
+                <p class="bio">Oversees workflow and service delivery across all departments.</p>
             </div>
             <div class="team-card">
                 <div class="team-avatar">CS</div>
                 <h4>Creative Specialist</h4>
                 <p class="role">Branding & Design</p>
-                <p class="bio">Leads product design, branding, and creative direction for leather goods.</p>
+                <p class="bio">Leads product design, branding, and creative direction.</p>
             </div>
             <div class="team-card">
                 <div class="team-avatar">MM</div>
                 <h4>Marketing Manager</h4>
-                <p class="role">Brand & Engagement</p>
-                <p class="bio">Drives customer engagement, brand awareness, and marketing strategies.</p>
+                <p class="role">Brand Awareness & Engagement</p>
+                <p class="bio">Drives customer engagement and brand awareness.</p>
             </div>
         </div>
     </div>
@@ -1390,23 +677,23 @@
         <div class="impact-grid reveal">
             <div class="impact-card">
                 <i class="fa-solid fa-briefcase"></i>
-                <h4>Job Creation</h4>
+                <h4>Creating Jobs</h4>
                 <p>Meaningful employment for women, youth, and people with disabilities.</p>
             </div>
             <div class="impact-card">
                 <i class="fa-solid fa-gem"></i>
                 <h4>Local Craftsmanship</h4>
-                <p>Preserving and promoting Malawian leather craftsmanship traditions.</p>
+                <p>Promoting Malawian leather craftsmanship and traditions.</p>
             </div>
             <div class="impact-card">
                 <i class="fa-solid fa-graduation-cap"></i>
                 <h4>Training & Mentorship</h4>
-                <p>Skills development programs empowering community members.</p>
+                <p>Skills development programs for the community.</p>
             </div>
             <div class="impact-card">
                 <i class="fa-solid fa-earth-africa"></i>
                 <h4>Eco-Friendly</h4>
-                <p>Sustainable practices protecting our environment for future generations.</p>
+                <p>Using environmentally friendly practices across all operations.</p>
             </div>
         </div>
     </div>
@@ -1491,8 +778,8 @@
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand">
-                <img src="img/logo.png" alt="Joan Investments">
-                <p>Empowering communities through quality lifestyle solutions — handcrafted leather products, professional laundry, and elegant wedding car hire in Malawi.</p>
+                <img src="img/logo2.png" alt="Joan Investments">
+                <p>Empowering communities through quality lifestyle solutions — handcrafted leather products, professional dry cleaning and laundry, and elegant wedding car hire in Malawi.</p>
             </div>
             <div class="footer-col">
                 <h5>Quick Links</h5>
@@ -1500,7 +787,7 @@
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#why">Why Choose Us</a></li>
-                    <li><a href="#team">Our Team</a></li>
+                    <li><a href="articles.html">Our Stories</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -1533,113 +820,46 @@
     </div>
 </footer>
 
-<!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
 <script>
-    // ============ HERO SWIPER ============
     const heroSwiper = new Swiper('.swiper-hero', {
-        slidesPerView: 1,
-        loop: true,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.hero-pagination',
-            clickable: true,
-        },
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true
-        },
+        slidesPerView: 1, loop: true,
+        autoplay: { delay: 5000, disableOnInteraction: false },
+        pagination: { el: '.hero-pagination', clickable: true },
+        effect: 'fade', fadeEffect: { crossFade: true },
     });
 
-    // ============ NAVBAR SCROLL EFFECT ============
     const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
 
-    // ============ MOBILE MENU ============
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
-    
-    function openMenu() {
-        hamburger.classList.add('active');
-        mobileMenu.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-    
-    function closeMenu() {
-        hamburger.classList.remove('active');
-        mobileMenu.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-    
-    hamburger.addEventListener('click', () => {
-        if (mobileMenu.classList.contains('active')) {
-            closeMenu();
-        } else {
-            openMenu();
-        }
-    });
-    
-    // Close menu when clicking a link
-    mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            closeMenu();
-        });
-    });
-    
-    // Close menu on escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
-            closeMenu();
-        }
-    });
+    function openMenu() { hamburger.classList.add('active'); mobileMenu.classList.add('active'); document.body.style.overflow = 'hidden'; }
+    function closeMenu() { hamburger.classList.remove('active'); mobileMenu.classList.remove('active'); document.body.style.overflow = ''; }
+    hamburger.addEventListener('click', () => mobileMenu.classList.contains('active') ? closeMenu() : openMenu());
+    mobileMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && mobileMenu.classList.contains('active')) closeMenu(); });
 
-    // ============ SCROLL REVEAL ============
-    const revealElements = document.querySelectorAll('.reveal');
-    
-    function checkReveal() {
-        const windowHeight = window.innerHeight;
-        revealElements.forEach(el => {
-            const top = el.getBoundingClientRect().top;
-            if (top < windowHeight - 80) {
-                el.classList.add('visible');
-            }
-        });
-    }
-    
+    const reveals = document.querySelectorAll('.reveal');
+    function checkReveal() { const h = window.innerHeight; reveals.forEach(el => { if (el.getBoundingClientRect().top < h - 80) el.classList.add('visible'); }); }
     window.addEventListener('scroll', checkReveal);
     window.addEventListener('load', checkReveal);
 
-    // ============ CONTACT FORM ============
     document.getElementById('contactForm').addEventListener('submit', function(e) {
         e.preventDefault();
-        const formData = new FormData(this);
-        const data = Object.fromEntries(formData);
-        alert('Thank you for your message, ' + data.name + '! We will contact you shortly at ' + data.email + '.');
+        const d = Object.fromEntries(new FormData(this));
+        alert('Thank you, ' + d.name + '! We will contact you at ' + d.email + '.');
         this.reset();
     });
 
-    // ============ SMOOTH SCROLL ============
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', function(e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth' });
-            }
+            const t = document.querySelector(this.getAttribute('href'));
+            if (t) t.scrollIntoView({ behavior: 'smooth' });
         });
     });
 
-    // Initial reveal check
     checkReveal();
 </script>
 
